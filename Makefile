@@ -9,7 +9,7 @@ SRCS = $(wildcard $(SRCDIR)/*.c)
 DEPS = $(wildcard $(INCDIR)/*.h)
 OBJS = $(patsubst $(SRCDIR)/%.c,$(OBJDIR)/%.o,$(SRCS))
 
-OUT = nrucres
+OUT = carets
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.c $(DEPS)
 	$(CC) $(CFLAGS) -c $< -o $@
