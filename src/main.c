@@ -18,9 +18,9 @@ int main(int argc, char **argv)
     lvl.prop.currLvl = 0;
     // probably should be its own structure?
     char *lvlFolder[] = {
-        "./.levels/nrucres1/lv01",
-        "./.levels/nrucres1/lv02",
-        "./.levels/nrucres1/lv03"
+        "./.levels/lvpk1/lv01",
+        "./.levels/lvpk1/lv02",
+        "./.levels/lvpk1/lv03"
     };
     char lvlQuantity = sizeof(lvlFolder) / sizeof(lvlFolder[0]);
 
