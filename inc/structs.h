@@ -78,6 +78,7 @@ struct Entity {
 struct LevelEntities {
     Entity *Player;
     Entity *Carrots;
+    Entity *Hazards;
     Entity *LevelGate;
     Entity *LevelExit;
 };

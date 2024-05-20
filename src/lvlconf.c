@@ -190,6 +190,9 @@ void parseTile(Level lvl, int x, int y, int factor)
 		case '+':
             mvaddch_colorized(lvl.entities.LevelGate->color, posX, posY, '#');
 			return;
+		case '!':
+			mvaddch_colorized(Hazard, posX, posY, tile);
+			return;
 		default:
 			return;
 	}

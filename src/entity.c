@@ -42,6 +42,7 @@ void initLevelEntities(LevelEntities *entities, LevelMap map)
 {
     entities->Player = initSingleEntity(map, '@', Player, True);
     entities->Carrots = initSerialEntities(map, '^', Carrot);
+    entities->Carrots = initSerialEntities(map, '!', Hazard);
     entities->LevelGate = initSingleEntity(map, '+', Gate, False);
     entities->LevelExit = initSingleEntity(map, '$', Exit, False);
 }

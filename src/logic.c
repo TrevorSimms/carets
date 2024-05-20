@@ -31,11 +31,11 @@ void parseKeyInput(int input, Entity *ent, Level *lvl, RuntimeFlags *flags)
             flags->bRun = False;
             flags->bQuit = True;
             return;
-        /** Debug control, delete when exporting
+        /** Debug control, delete when exporting **/
         case 'n':
             flags->bRun = False;
             return;
-        ** End Debug */
+        /** End Debug */
         default:
             return;
     }
@@ -68,6 +68,13 @@ void parseKeyInput(int input, Entity *ent, Level *lvl, RuntimeFlags *flags)
             teleEntity(lvl->entities.Player, mapCursor, &(lvl->mapData));
             lvl->entities.Player->color = Exit;
             flags->bRun = False;
+            break;
+        case '!':
+            mvprintw(lvl->mapData.rows + lvl->prop.factor, 2 * lvl->prop.factor,
+                "Watch out!");
+            getch();
+            flags->bReset = True;
+            break;
         default:
             return;
     }

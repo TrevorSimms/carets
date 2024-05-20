@@ -20,7 +20,8 @@ int main(int argc, char **argv)
     char *lvlFolder[] = {
         "./.levels/lvpk1/lv01",
         "./.levels/lvpk1/lv02",
-        "./.levels/lvpk1/lv03"
+        "./.levels/lvpk1/lv03",
+        "./.levels/lvpk1/lv04"
     };
     char lvlQuantity = sizeof(lvlFolder) / sizeof(lvlFolder[0]);
 
