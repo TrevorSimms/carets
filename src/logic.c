@@ -70,8 +70,12 @@ void parseKeyInput(int input, Entity *ent, Level *lvl, RuntimeFlags *flags)
             flags->bRun = False;
             break;
         case '!':
-            mvprintw(lvl->mapData.rows + lvl->prop.factor, 2 * lvl->prop.factor,
-                "Watch out!");
+            teleEntity(lvl->entities.Player, mapCursor, &(lvl->mapData));
+            lvl->entities.Player->color = Hazard;
+            genMap(*lvl);
+            refresh();
+            mvprintw(lvl->mapData.rows + lvl->prop.factor + 1, 2 * lvl->prop.factor,
+                "Oh h*ck, I can't believe you've done this.");
             getch();
             flags->bReset = True;
             break;
