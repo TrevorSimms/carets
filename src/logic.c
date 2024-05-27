@@ -31,11 +31,11 @@ void parseKeyInput(int input, Entity *ent, Level *lvl, RuntimeFlags *flags)
             flags->bRun = False;
             flags->bQuit = True;
             return;
-        /** Debug control, delete when exporting **/
+        /** Debug control, delete when exporting **
         case 'n':
             flags->bRun = False;
             return;
-        /** End Debug */
+        ** End Debug */
         default:
             return;
     }
